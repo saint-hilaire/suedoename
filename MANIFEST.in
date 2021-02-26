@@ -1,0 +1,4 @@
+include suedoename/female.txt
+include suedoename/male.txt
+include suedoename/nicknames.txt
+include suedoename/surnames.txt

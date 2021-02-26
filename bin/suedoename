@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+
+import argparse
+import random
+import unicodedata
+import string
+from suedoename import *
+
+
+
+
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-f", "--female", action = "store_true")
+    parser.add_argument("-m", "--male", action = "store_true")
+    args = parser.parse_args()
+
+    female = args.female
+    male = args.male
+
+    if female:
+        gender_str = "female"
+    elif male:
+        gender_str = "male"
+    else:
+        gender_str = ""
+    random_person = RandomPerson(gender_str)
+    """
+    for i in random_email.first_names:
+        print(i)
+    """
+    random_name = random_person.random_full_name()
+    first = random_name['first']
+    last = random_name['last']
+
+    print(first + " " + last)
+    #print(random_person.make_name_email_safe(random_name) + "@gmail.com")
+    webmails = ["gmail", "yahoo", "aol", "outlook", "gmx"]
+    for webmail in webmails:
+        print(random_person.make_random_email(random_name, webmail))
+
+    #print(last)

@@ -1,0 +1,8 @@
+README.md
+setup.py
+bin/suedoename
+suedoename/__init__.py
+suedoename.egg-info/PKG-INFO
+suedoename.egg-info/SOURCES.txt
+suedoename.egg-info/dependency_links.txt
+suedoename.egg-info/top_level.txt
